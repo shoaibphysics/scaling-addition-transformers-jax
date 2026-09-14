@@ -1,4 +1,4 @@
-# Scaling Addition Transformers in JAX
+# Addition Transformers in JAX: Compute scaling and capability transitions
 
 ![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)
 ![JAX](https://img.shields.io/badge/JAX-accelerated%20computing-5A45FF)
@@ -72,7 +72,7 @@ from google.colab import drive
 
 drive.mount("/content/drive")
 
-%cd "/content/drive/MyDrive/Colab Notebooks/scaling-addition-transformers-jax"
+%cd "/content/drive/MyDrive/Colab Notebooks/addition-transformers-jax"
 %pip install -q --upgrade uv
 ```
 
@@ -128,13 +128,15 @@ The reusable implementation lives in `src/scaling_transformers_in_jax/`:
 - `cli.py` exposes that inference interface as the `addition-transformer` terminal command.
 - `scaling_experiments.py` and `scaling_laws.py` support the multi-model experiment and its fits.
 
-The repository is named `scaling-addition-transformers-jax`; the Python import package remains `scaling_transformers_in_jax` for compatibility with the notebooks and source modules.
+The repository is named `addition-transformers-jax`; the Python import package
+remains `scaling_transformers_in_jax` for compatibility with the notebooks and
+source modules.
 
 ## Notebooks
 
 ### 1. [`01_addition_transformer.ipynb`](notebooks/01_addition_transformer.ipynb)
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shoaibphysics/scaling-addition-transformers-jax/blob/main/notebooks/01_addition_transformer.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shoaibphysics/addition-transformers-jax/blob/main/notebooks/01_addition_transformer.ipynb)
 
 A clean end-to-end experiment that trains a roughly 10-million-parameter model, follows its learning curves, evaluates held-out additions, exports and reloads the learned parameters, and compares several decoding strategies.
 
@@ -146,7 +148,7 @@ $E_{\mathrm{full}}\approx1.03$ is nonzero because full-sequence NLL scores the r
 
 ### 2. [`02_dense_addition_scaling_and_transitions.ipynb`](notebooks/02_dense_addition_scaling_and_transitions.ipynb)
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shoaibphysics/scaling-addition-transformers-jax/blob/main/notebooks/02_dense_addition_scaling_and_transitions.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shoaibphysics/addition-transformers-jax/blob/main/notebooks/02_dense_addition_scaling_and_transitions.ipynb)
 
 This notebook trains 110 endpoints across 21 model configurations and nine
 approximate compute budgets. Following

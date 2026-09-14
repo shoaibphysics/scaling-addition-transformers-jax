@@ -1,7 +1,7 @@
 [project]
 name = "scaling-addition-transformers-jax"
 version = "0.1.0"
-description = "Addition Transformers and capability-transition scaling in JAX."
+description = "Addition Transformers in JAX with compute-scaling and capability-transition experiments."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
