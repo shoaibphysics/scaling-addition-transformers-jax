@@ -1,0 +1,14 @@
+{
+  "export_format_version": 1,
+  "training_step": 12000,
+  "model_config": {
+    "vocab_size": 13,
+    "context_length": 12,
+    "d_model": 384,
+    "num_layers": 6,
+    "num_heads": 6,
+    "rope_theta": 10000.0,
+    "d_ff": 1024
+  },
+  "vocab": "0123456789 +="
+}

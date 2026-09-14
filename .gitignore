@@ -1,0 +1,17 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+build/
+dist/
+*.egg-info/
+
+# Ignore generated run artifacts.
+runs/**
+
+# Keep the compact endpoint records needed by Notebook 02.
+!runs/02_dense_addition_scaling_and_transitions/
+!runs/02_dense_addition_scaling_and_transitions/dense-addition-isoflop-v1/
+!runs/02_dense_addition_scaling_and_transitions/dense-addition-isoflop-v1/results/
+!runs/02_dense_addition_scaling_and_transitions/dense-addition-isoflop-v1/results/*.json

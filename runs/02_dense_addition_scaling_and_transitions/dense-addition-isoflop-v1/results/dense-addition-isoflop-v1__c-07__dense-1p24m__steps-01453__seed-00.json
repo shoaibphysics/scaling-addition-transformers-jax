@@ -1,0 +1,177 @@
+{
+  "protocol": "dense-addition-isoflop-v1",
+  "run_id": "dense-addition-isoflop-v1__c-07__dense-1p24m__steps-01453__seed-00",
+  "model_config": {
+    "vocab_size": 13,
+    "context_length": 12,
+    "d_model": 160,
+    "num_layers": 4,
+    "num_heads": 5,
+    "rope_theta": 10000.0,
+    "d_ff": 432
+  },
+  "train_config": {
+    "batch_size": 1024,
+    "log_every": 72,
+    "num_eval_batches": 1,
+    "checkpoint_every": 363,
+    "warmup_steps": 73,
+    "learning_rate_decay_step": 1453,
+    "num_steps": 1453,
+    "peak_learning_rate": 0.0003,
+    "end_learning_rate": 3e-05,
+    "max_grad_norm": 1.0,
+    "weight_decay": 0.1,
+    "adam_epsilon": 1e-08,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.95
+  },
+  "model_seed": 0,
+  "training_seed": 2027,
+  "data": {
+    "vocab": "0123456789 +=",
+    "split_seed": 2026,
+    "train_size": 900000,
+    "val_size": 50000,
+    "test_size": 50000,
+    "training_sampling": "epoch_shuffle",
+    "data_order_seed": 2027,
+    "steps_per_epoch": 878,
+    "examples_per_epoch": 899072,
+    "examples_dropped_per_epoch": 928
+  },
+  "target_training_compute": 133352143216332.4,
+  "parameter_count": 1244640,
+  "optimizer_steps": 1453,
+  "training_examples": 1487872,
+  "training_token_positions": 17854464,
+  "mean_scored_targets_per_example": 11.274516105651855,
+  "expected_scored_training_tokens": 16775036.827148438,
+  "scored_training_tokens": 16774915,
+  "unique_training_examples": 899665,
+  "nominal_training_passes": 1.653191111111111,
+  "steps_per_epoch": 878,
+  "effective_epochs": 1.6548974943052392,
+  "training_compute_approx": 133334280437760,
+  "relative_compute_error": -0.0001339519421403532,
+  "validation": {
+    "full_loss": 1.054210815692484,
+    "answer_loss": 0.04727017636429919,
+    "exact_answer_accuracy": 0.94808,
+    "full_token_count": 563811,
+    "answer_token_count": 224813,
+    "example_count": 50000
+  },
+  "validation_monitor_size": 1024,
+  "endpoint_batch_size": 1000,
+  "training_history": [
+    {
+      "step": 72,
+      "train_loss": 1.757811188697815,
+      "validation_loss": 1.75546395778656
+    },
+    {
+      "step": 144,
+      "train_loss": 1.5801314115524292,
+      "validation_loss": 1.5733370780944824
+    },
+    {
+      "step": 216,
+      "train_loss": 1.51624596118927,
+      "validation_loss": 1.5141170024871826
+    },
+    {
+      "step": 288,
+      "train_loss": 1.4912687540054321,
+      "validation_loss": 1.489680290222168
+    },
+    {
+      "step": 360,
+      "train_loss": 1.4741631746292114,
+      "validation_loss": 1.4741852283477783
+    },
+    {
+      "step": 432,
+      "train_loss": 1.4440665245056152,
+      "validation_loss": 1.4461333751678467
+    },
+    {
+      "step": 504,
+      "train_loss": 1.369476079940796,
+      "validation_loss": 1.3687822818756104
+    },
+    {
+      "step": 576,
+      "train_loss": 1.2435823678970337,
+      "validation_loss": 1.237051010131836
+    },
+    {
+      "step": 648,
+      "train_loss": 1.1653501987457275,
+      "validation_loss": 1.16596519947052
+    },
+    {
+      "step": 720,
+      "train_loss": 1.127221941947937,
+      "validation_loss": 1.1300420761108398
+    },
+    {
+      "step": 792,
+      "train_loss": 1.1078492403030396,
+      "validation_loss": 1.1026524305343628
+    },
+    {
+      "step": 864,
+      "train_loss": 1.0936115980148315,
+      "validation_loss": 1.0937291383743286
+    },
+    {
+      "step": 936,
+      "train_loss": 1.079002022743225,
+      "validation_loss": 1.0792280435562134
+    },
+    {
+      "step": 1008,
+      "train_loss": 1.0689060688018799,
+      "validation_loss": 1.0728552341461182
+    },
+    {
+      "step": 1080,
+      "train_loss": 1.065495252609253,
+      "validation_loss": 1.0671236515045166
+    },
+    {
+      "step": 1152,
+      "train_loss": 1.0605173110961914,
+      "validation_loss": 1.0637235641479492
+    },
+    {
+      "step": 1224,
+      "train_loss": 1.0589529275894165,
+      "validation_loss": 1.0601742267608643
+    },
+    {
+      "step": 1296,
+      "train_loss": 1.0568991899490356,
+      "validation_loss": 1.0585145950317383
+    },
+    {
+      "step": 1368,
+      "train_loss": 1.0570298433303833,
+      "validation_loss": 1.0567675828933716
+    },
+    {
+      "step": 1440,
+      "train_loss": 1.0540621280670166,
+      "validation_loss": 1.0549978017807007
+    },
+    {
+      "step": 1453,
+      "train_loss": 1.0545116662979126,
+      "validation_loss": 1.0547451972961426
+    }
+  ],
+  "backend": "gpu",
+  "device": "cuda:0",
+  "checkpoint_dir": "/content/drive/MyDrive/Colab Notebooks/scaling-transformers-in-jax/runs/02_dense_addition_compute_optimal_scaling/dense-addition-isoflop-v1/checkpoints/dense-addition-isoflop-v1__c-07__dense-1p24m__steps-01453__seed-00"
+}
