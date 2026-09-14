@@ -17,6 +17,36 @@ wheels = [
 ]
 
 [[package]]
+name = "addition-transformers-jax"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "flax" },
+    { name = "jax" },
+    { name = "numpy" },
+    { name = "optax" },
+    { name = "orbax-checkpoint" },
+]
+
+[package.optional-dependencies]
+analysis = [
+    { name = "matplotlib" },
+    { name = "scipy" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "flax", specifier = "==0.12.9" },
+    { name = "jax", specifier = "==0.11.1" },
+    { name = "matplotlib", marker = "extra == 'analysis'", specifier = ">=3.10,<4" },
+    { name = "numpy", specifier = ">=2,<3" },
+    { name = "optax", specifier = "==0.2.8" },
+    { name = "orbax-checkpoint", specifier = "==0.12.4" },
+    { name = "scipy", marker = "extra == 'analysis'", specifier = ">=1.16,<2" },
+]
+provides-extras = ["analysis"]
+
+[[package]]
 name = "aiofiles"
 version = "25.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -939,36 +969,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/c0/8f/0722ca900cc807c13
 wheels = [
     { url = "https://files.pythonhosted.org/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl", hash = "sha256:33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb", size = 310654, upload-time = "2026-04-12T08:24:02.83Z" },
 ]
-
-[[package]]
-name = "scaling-addition-transformers-jax"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "flax" },
-    { name = "jax" },
-    { name = "numpy" },
-    { name = "optax" },
-    { name = "orbax-checkpoint" },
-]
-
-[package.optional-dependencies]
-analysis = [
-    { name = "matplotlib" },
-    { name = "scipy" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "flax", specifier = "==0.12.9" },
-    { name = "jax", specifier = "==0.11.1" },
-    { name = "matplotlib", marker = "extra == 'analysis'", specifier = ">=3.10,<4" },
-    { name = "numpy", specifier = ">=2,<3" },
-    { name = "optax", specifier = "==0.2.8" },
-    { name = "orbax-checkpoint", specifier = "==0.12.4" },
-    { name = "scipy", marker = "extra == 'analysis'", specifier = ">=1.16,<2" },
-]
-provides-extras = ["analysis"]
 
 [[package]]
 name = "scipy"

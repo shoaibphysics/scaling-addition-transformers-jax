@@ -1,5 +1,5 @@
 [project]
-name = "scaling-addition-transformers-jax"
+name = "addition-transformers-jax"
 version = "0.1.0"
 description = "Addition Transformers in JAX with compute-scaling and capability-transition experiments."
 readme = "README.md"
